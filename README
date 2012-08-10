@@ -1,0 +1,6 @@
+APK Batch Release
+
+This Was Created for my Personal Use to help do a Batch release of all my Versions of APK Multi-Tools without having to zip them allone at a time to save on time to get them ready for release Server Side.
+
+Useage
+To simply Use all you have to do is open the script.bat in a text Editor and make sure that you set the path to Zip to the Installation Directory where you installed Zip and edit the paths to where you have your local copies of the tools at so it can properly find and zip them in the correct locations 
