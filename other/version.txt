@@ -1,2 +1,2 @@
 * APK-Batch-Release v0.0.1                                                      *
-* 7zip              v9.20                                                       *
+* 7zip              v9.20.0.0                                                   *
