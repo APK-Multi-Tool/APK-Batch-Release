@@ -74,7 +74,7 @@ ECHO *                                       SETTINGS                           
 ECHO ***************************************************************************************
 
 ECHO * 5.   Read Log                                                                       *
-ECHO * 6.  About / Tips / Debug Section                                                   *
+ECHO * 6.  About / Tips / Debug Section                                                    *
 ECHO * 00.  Quit                                                                           *
 ECHO ***************************************************************************************
 SET /P menunr=Please make your decision:
@@ -149,14 +149,14 @@ PAUSE
 goto MENU00
 :APKZIP
 cd ..\APK-Multi-Tool
-"C:\Program Files\7-Zip\7z.exe" a -r -tzip -y -mx9 -mmt ..\releases\APK-Multi-Tool.zip -xr!?git\
+"%~dp0other\7za.exe" a -r -tzip -y -mx9 -mmt ..\releases\APK-Multi-Tool.zip -xr!?git\
 cd "%~dp0"
 pause
 goto MENU00
 
 :APK7Z
 cd ..\APK-Multi-Tool
-"C:\Program Files\7-Zip\7z.exe" a -r -t7z -y -mx9 -mmt ..\releases\APK-Multi-Tool.7z -xr!?git\
+"%~dp0other\7za.exe" a -r -t7z -y -mx9 -mmt ..\releases\APK-Multi-Tool.7z -xr!?git\
 cd "%~dp0"
 pause
 goto MENU00
@@ -203,14 +203,14 @@ goto MENU01
 
 :APK2ZIP
 cd ..\APK-Multi-Tool2
-"C:\Program Files\7-Zip\7z.exe" a -r -tzip -y -mx9 -mmt ..\releases\APK-Multi-Tool2.zip -xr!?git\
+"%~dp0other\7za.exe" a -r -tzip -y -mx9 -mmt ..\releases\APK-Multi-Tool2.zip -xr!?git\
 cd "%~dp0"
 pause
 goto MENU01
 
 :APK27Z
 cd ..\APK-Multi-Tool2
-"C:\Program Files\7-Zip\7z.exe" a -r -t7z -y -mx9 -mmt ..\releases\APK-Multi-Tool2.7z -xr!?git\
+"%~dp0other\7za.exe" a -r -t7z -y -mx9 -mmt ..\releases\APK-Multi-Tool2.7z -xr!?git\
 cd "%~dp0"
 pause
 goto MENU01
@@ -253,36 +253,36 @@ ECHO ***************************************************************************
 ECHO *       You went crazy and entered something that wasnt part of the menu options      *
 ECHO ***************************************************************************************
 PAUSE
+goto MENU02
 
 :APKlZIP
 cd ..\APK-Multi-Tool-Linux
-"C:\Program Files\7-Zip\7z.exe" a -r -tzip -y -mx9 -mmt ..\releases\APK-Multi-Tool-Linux.zip -xr!?git\
+"%~dp0other\7za.exe" a -r -tzip -y -mx9 -mmt ..\releases\APK-Multi-Tool-Linux.zip -xr!?git\
 cd "%~dp0"
 pause
-goto MENU01
+goto MENU02
 
 :APKl7Z
 cd ..\APK-Multi-Tool-Linux
-"C:\Program Files\7-Zip\7z.exe" a -r -t7z -y -mx9 -mmt ..\releases\APK-Multi-Tool-Linux.7z -xr!?git\
+"%~dp0other\7za.exe" a -r -t7z -y -mx9 -mmt ..\releases\APK-Multi-Tool-Linux.7z -xr!?git\
 cd "%~dp0"
 pause
-goto MENU01
+goto MENU02
 
 :APKlTAR
 ECHO ***************************************************************************************
 ECHO *                                     COMING SOON                                     *
 ECHO ***************************************************************************************
 pause
-goto MENU01
+goto MENU02
 
 :APKlGZ
 ECHO ***************************************************************************************
 ECHO *                                     COMING SOON                                     *
 ECHO ***************************************************************************************
 pause
-goto MENU01
-
 goto MENU02
+
 :MENU03
 cd "%~dp0"
 set menunr=GARBAGE03
